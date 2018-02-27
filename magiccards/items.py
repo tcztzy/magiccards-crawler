@@ -6,9 +6,14 @@
 # https://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import TakeFirst
 
 
-class MagiccardsItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class LanguageItem(scrapy.Item):
+    name = scrapy.Field()
+    code = scrapy.Field()
+
+
+class LanguageItemLoader(ItemLoader):
+    default_output_processor = TakeFirst()

@@ -12,6 +12,7 @@ scrapy = "*"
 
 [dev-packages]
 
+ipython = "*"
 
 
 [requires]
