@@ -1,2 +1,2 @@
-# magiccards-crawler
-Crawler created by Scrapy for magiccards.info
+# magiccards-spider
+Spider created by Scrapy for magiccards.info
