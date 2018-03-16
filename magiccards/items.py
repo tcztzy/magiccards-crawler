@@ -7,7 +7,7 @@
 
 import scrapy
 from scrapy.loader import ItemLoader
-from scrapy.loader.processors import TakeFirst
+from scrapy.loader.processors import TakeFirst, MapCompose
 
 
 class LanguageItem(scrapy.Item):
@@ -17,3 +17,12 @@ class LanguageItem(scrapy.Item):
 
 class LanguageItemLoader(ItemLoader):
     default_output_processor = TakeFirst()
+
+
+class CardSetItem(scrapy.Item):
+    name = scrapy.Field()
+
+
+class CardSetItemLoader(ItemLoader):
+    name_in = MapCompose(str.strip)
+    name_out = TakeFirst()

@@ -92,3 +92,4 @@ ROBOTSTXT_OBEY = True
 
 FEED_URI = os.environ.get('MAGICCARDS_FEED_URI', 'stdout:')
 FEED_FORMAT = 'json'
+JOBDIR = os.environ.get('MAGICCARDS_JOBDIR')
